@@ -1,4 +1,4 @@
-$(document).ready(function() {
+window.onload = function() {
   var map = L.map('map', {
     crs: L.CRS.Simple
   });
