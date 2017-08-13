@@ -4,7 +4,7 @@ window.onload = function () {
     });
 
     var bounds = [[0, 0], [1000, 1000]];
-    var image = L.imageOverlay('../image/mymap.png', bounds).addTo(map);
+    var image = L.imageOverlay('./assets/image/mymap.png', bounds).addTo(map);
 
     map.fitBounds(bounds);
 };
