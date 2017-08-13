@@ -7,4 +7,4 @@ $(document).ready(function() {
   var image = L.imageOverlay('/image/mymap.png', bounds).addTo(map);
 
   map.fitBounds(bounds);
-}
+});
