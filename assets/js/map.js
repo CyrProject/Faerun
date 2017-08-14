@@ -1,10 +1,12 @@
 window.onload = function () {
+    var bounds = [[0, 0], [1000, 1500]];
+
     var map = L.map('map', {
         crs: L.CRS.Simple,
-        maxZoom: 2.5
+        maxZoom: 2.5,
+        maxBounds: bounds
     });
 
-    var bounds = [[0, 0], [1600, 2000]];
     var image = L.imageOverlay('./assets/image/mymap.png', bounds).addTo(map);
 
     map.fitBounds(bounds);
@@ -17,8 +19,4 @@ window.onload = function () {
         }
         return yx(y, x);
     };
-
-    var neverwinter = xy(698, 1381);
-
-    L.marker(neverwinter).addTo(map).bindTooltip('Neverwinter');
 };
