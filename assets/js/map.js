@@ -21,7 +21,7 @@ window.onload = function () {
         maxBounds: bounds
     });
 
-    var image = L.imageOverlay('./assets/image/mymapnolabels.png', bounds).addTo(map);
+    var image = L.imageOverlay('./assets/image/mymapnolabels-min.png', bounds).addTo(map);
 
     map.fitBounds(bounds);
 
