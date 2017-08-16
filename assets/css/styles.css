@@ -1,10 +1,15 @@
 #map {
-  height: 100%;
+    height: 100%;
 }
 
 .legend {
-  left: 0;
-  bottom: 0;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+}
+
+.legend p {
+    width: 230%;
 }
 
 .leaflet-touch .leaflet-control-zoom-in {
