@@ -15,7 +15,7 @@ window.onload = function () {
 
     var map = L.map('map', {
         crs: L.CRS.Simple,
-        center: [820, 580],
+        center: [840, 530],
         maxZoom: 2.5,
         minZoom: 2.5,
         maxBounds: bounds
@@ -25,7 +25,7 @@ window.onload = function () {
 
     map.fitBounds(bounds);
 
-    map.setView([820, 580], 2.5);
+    map.setView([840, 530], 2.5);
 
     var legend = L.control();
 
