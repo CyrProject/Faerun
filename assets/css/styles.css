@@ -3,5 +3,16 @@
 }
 
 .legend {
-  font-size: 20px;
+  left: 0;
+  bottom: 0;
+}
+
+.leaflet-touch .leaflet-control-zoom-in {
+    font-size: 24px;
+    font-weight: normal;
+}
+
+.leaflet-touch .leaflet-control-zoom-out {
+    font-size: 25px;
+    font-weight: normal;
 }

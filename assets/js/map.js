@@ -1,35 +1,55 @@
+console.log('Good on you for checking the source for hints or secrets...');
+console.log('That curiousity will serve you well.');
+
 window.onload = function () {
-  var bounds = [[0, 0], [1000, 1500]];
+    var yx = L.latLng;
 
-  var map = L.map('map', {
-    crs: L.CRS.Simple,
-    maxZoom: 2.5,
-    maxBounds: bounds
-  });
+    var xy = function (x, y) {
+        if (L.Util.isArray(x)) {
+            return yx(x[1], x[0]);
+        }
+        return yx(y, x);
+    };
 
-  var image = L.imageOverlay('./assets/image/mymap.png', bounds).addTo(map);
+    var bounds = [[0, 0], [994, 1500]];
 
-  map.fitBounds(bounds);
+    var map = L.map('map', {
+        crs: L.CRS.Simple,
+        center: [820, 580],
+        maxZoom: 2.5,
+        minZoom: 2.5,
+        maxBounds: bounds
+    });
 
-  var yx = L.latLng;
+    var image = L.imageOverlay('./assets/image/mymapnolabels.png', bounds).addTo(map);
 
-  var xy = function (x, y) {
-    if (L.Util.isArray(x)) {
-      return yx(x[1], x[0]);
-    }
-    return yx(y, x);
-  };
+    map.fitBounds(bounds);
 
-  var legend = L.control({position: 'bottomleft'});
+    map.setView([820, 580], 2.5);
 
-  legend.onAdd = function (map) {
+    var legend = L.control();
 
-    var div = L.DomUtil.create('div', 'legend');
+    legend.onAdd = function () {
+        var div = L.DomUtil.create('div', 'rpgui-container framed legend');
 
-    div.innerHTML += '1 hex = 10 miles'
+        div.innerHTML += '<p>1 hex = 10 miles</p>';
 
-    return div;
-  };
+        return div;
+    };
 
-  legend.addTo(map);
+    legend.addTo(map);
+
+    var excamationIcon = L.icon({
+        iconUrl: './assets/css/img/icons/exclamation.png',
+
+        iconSize:     [24, 24],
+        iconAnchor:   [5, 12],
+        popupAnchor:  [5, -12]
+    });
+
+    L.marker([807, 522], {icon: excamationIcon}).addTo(map).bindPopup('Neverwinter');
+    L.marker([836, 535], {icon: excamationIcon}).addTo(map).bindPopup('Mount Hotenow');
+    L.marker([830, 535], {icon: excamationIcon}).addTo(map).bindPopup('Sunless Citadel');
+    L.marker([824, 532], {icon: excamationIcon}).addTo(map).bindPopup('Oakhurst');
+    L.marker([881, 504], {icon: excamationIcon}).addTo(map).bindPopup('Luskan');
 };
