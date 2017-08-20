@@ -9,21 +9,7 @@ body {
 }
 
 .legend {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-}
-
-.legend p {
-    width: 230%;
-}
-
-.leaflet-touch .leaflet-control-zoom-in {
-    font-size: 24px;
-    font-weight: normal;
-}
-
-.leaflet-touch .leaflet-control-zoom-out {
-    font-size: 25px;
-    font-weight: normal;
+    background: #ffffff;
+    padding: 8px;
+    border-radius: 4px;
 }
