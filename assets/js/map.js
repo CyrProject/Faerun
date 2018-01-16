@@ -14,8 +14,8 @@ window.onload = function () {
         crs: L.CRS.Simple,
         center: [-0.00269, 0.00406],
         maxBounds: bounds,
-        zoom: 20,
-        maxZoom: 20,
+        zoom: 19,
+        maxZoom: 19,
         minZoom: 17
     });
 
