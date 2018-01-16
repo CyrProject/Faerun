@@ -1,0 +1,1 @@
+tileup --in map.png --auto-zoom 4 --output-dir map_tiles

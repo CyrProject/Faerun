@@ -19,9 +19,9 @@ window.onload = function () {
         minZoom: 17
     });
 
-    L.tileLayer('./assets/image/image-tiles/{z}/map_tile_{x}_{y}-min.png', {
+    L.tileLayer('./assets/image/{z}/map_tile_{x}_{y}-min.png', {
         tileSize: 256,
-        maxZoom: 20,
+        maxZoom: 19,
         minZoom: 17
     }).addTo(map);
 
