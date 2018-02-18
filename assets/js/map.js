@@ -15,13 +15,13 @@ window.onload = function () {
         center: [-0.00269, 0.00406],
         maxBounds: bounds,
         zoom: 19,
-        maxZoom: 19,
+        maxZoom: 20,
         minZoom: 17
     });
 
     L.tileLayer('./assets/image/{z}/map_tile_{x}_{y}-min.png', {
         tileSize: 256,
-        maxZoom: 19,
+        maxZoom: 20,
         minZoom: 17
     }).addTo(map);
 
